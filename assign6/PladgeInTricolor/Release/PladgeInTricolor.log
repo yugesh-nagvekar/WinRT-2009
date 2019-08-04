@@ -1,0 +1,7 @@
+﻿  pladgeInTricolor.cpp
+d:\winrtapp\week 2\pladgeintricolor\pladgeintricolor.cpp(54): warning C4101: 'rect': unreferenced local variable
+d:\winrtapp\week 2\pladgeintricolor\pladgeintricolor.cpp(53): warning C4101: 'str': unreferenced local variable
+  Generating code
+  All 2 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  PladgeInTricolor.vcxproj -> D:\winrtApp\week 2\PladgeInTricolor\Release\PladgeInTricolor.exe
