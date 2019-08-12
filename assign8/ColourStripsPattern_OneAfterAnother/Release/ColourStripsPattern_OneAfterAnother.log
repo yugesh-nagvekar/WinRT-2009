@@ -1,0 +1,8 @@
+﻿  colourStripPattern_OneAfterAnother.cpp
+d:\winrtapp\week 2\colourstripspattern_oneafteranother\colourstrippattern_oneafteranother.cpp(52): warning C4101: 'rect': unreferenced local variable
+  Generating code
+  0 of 2 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ColourStripsPattern_OneAfterAnother.vcxproj -> D:\winrtApp\week 2\ColourStripsPattern_OneAfterAnother\Release\ColourStripsPattern_OneAfterAnother.exe

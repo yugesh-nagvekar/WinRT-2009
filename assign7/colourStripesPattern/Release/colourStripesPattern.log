@@ -1,8 +1,0 @@
-﻿  colourStripesPattern.cpp
-d:\winrtapp\week 2\colourstripespattern\colourstripespattern.cpp(52): warning C4101: 'rect': unreferenced local variable
-  Generating code
-  2 of 2 functions (100.0%) were compiled.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  colourStripesPattern.vcxproj -> D:\winrtApp\week 2\colourStripesPattern\Release\colourStripesPattern.exe

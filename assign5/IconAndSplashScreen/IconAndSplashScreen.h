@@ -1,0 +1,4 @@
+#pragma once
+#define ICON_APPLICATION 100
+#define BITMAP_BACKGROUND 101
+

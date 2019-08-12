@@ -52,12 +52,20 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	PAINTSTRUCT ps;
 	TCHAR str[155];
 	RECT rect;
-	TCHAR orange[] = TEXT("India is my country. All Indians are my Brothers and Sisters."
-		"I love my country and I am proud of its rich and varied heritage.");
-	TCHAR white[] = TEXT("I shall always strive to be worthy of it."
-		"I shall give my parents, teachers and all elders respect and treat everyone with courtesy.");
-	TCHAR green[] = TEXT("To my country and my people, I pledge my devotion."
-		"In their well being and prosperity alone, lies my happiness. ");
+	
+	TCHAR orange1[] = TEXT("India is my country.");
+	TCHAR orange2[] = TEXT("All Indians are my Brothers and Sisters.");
+	TCHAR orange3[] = TEXT("I love my country and I am proud of");
+	TCHAR orange4[] = TEXT("its rich and varied heritage.");
+
+	TCHAR white1[] = TEXT("I shall always strive to be worthy of it.");
+	TCHAR white2[] = TEXT("I shall give my parents, teachers and all elders");
+	TCHAR white3[] = TEXT("respect and treat everyone with courtesy.");
+
+	TCHAR green1[] = TEXT("To my country and my people,");
+	TCHAR green2[] = TEXT("I pledge my devotion. In their");
+	TCHAR green3[] = TEXT("well being and prosperity alone,");
+	TCHAR green4[] = TEXT("lies my happiness.");
 
 
 	switch (iMsg)
@@ -66,28 +74,36 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		PostQuitMessage(0);
 		break;
 	case WM_PAINT:
+		int iCenterH, iCenterV, iBoxTop;
+		int iLineNo = 0, iLineHeight = 20, iLineCount = 11;
+		GetClientRect(hwnd, &rect);
+		iCenterH = rect.left + (rect.right - rect.left)/2;
+		iCenterV = rect.top + (rect.bottom - rect.top)/2;
+		iBoxTop = iCenterV - (iLineCount / 2) * iLineHeight; // top of box = center - (half of line count)*line hight
 		hdc = BeginPaint(hwnd, &ps);
 		SetBkColor(hdc, RGB(0, 0, 0));
+		SetTextAlign(hdc, TA_CENTER);
 		
 		SetTextColor(hdc, RGB(255, 125, 0));
-		TextOut(hdc, 5, 5, orange, lstrlenW(orange));
+		//textOut with refPoint x - horizontally center and y - vertical top + each line Number * height
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), orange1, lstrlenW(orange1));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), orange2, lstrlenW(orange2));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), orange3, lstrlenW(orange3));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), orange4, lstrlenW(orange4));
+		
 		SetTextColor(hdc, RGB(255, 255, 255));
-		TextOut(hdc, 5, 25, white, lstrlenW(white));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), white1, lstrlenW(white1));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), white2, lstrlenW(white2));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), white3, lstrlenW(white3));
+
 		SetTextColor(hdc, RGB(0, 255, 0));
-		TextOut(hdc, 5, 45, green, lstrlenW(green));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), green1, lstrlenW(green1));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), green2, lstrlenW(green2));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), green3, lstrlenW(green3));
+		TextOut(hdc, iCenterH, iBoxTop + (iLineNo++ * iLineHeight), green4, lstrlenW(green4));
 
 
 		EndPaint(hwnd, &ps);
-
-		//wsprintf(str, TEXT("Win32 Window"));
-
-		//GetClientRect(hwnd, &rect);
-
-		//hdc = BeginPaint(hwnd, &ps);
-		//SetTextColor(hdc, RGB(0, 255, 0));
-		//SetBkColor(hdc, RGB(0, 0, 0));
-		//DrawText(hdc, orange, -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
-		//EndPaint(hwnd, &ps);
 		break;
 	}
 	return (DefWindowProc(hwnd, iMsg, wParam, lParam));
