@@ -1,0 +1,7 @@
+﻿     Creating library D:\Codes\winrtApp\COM\Aggregation\Aggregation_Inner\x64\Release\Aggregation_Inner.lib and object D:\Codes\winrtApp\COM\Aggregation\Aggregation_Inner\x64\Release\Aggregation_Inner.exp
+  Generating code
+  33 of 34 functions (97.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Aggregation_Inner.vcxproj -> D:\Codes\winrtApp\COM\Aggregation\Aggregation_Inner\x64\Release\Aggregation_Inner.dll

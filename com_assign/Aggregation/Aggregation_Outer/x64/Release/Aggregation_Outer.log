@@ -1,0 +1,9 @@
+﻿  Aggregation_Outer.cpp
+d:\codes\winrtapp\com\aggregation\aggregation_outer\aggregation_outer.cpp(181): warning C4101: 'str': unreferenced local variable
+     Creating library D:\Codes\winrtApp\COM\Aggregation\Aggregation_Outer\x64\Release\Aggregation_Outer.lib and object D:\Codes\winrtApp\COM\Aggregation\Aggregation_Outer\x64\Release\Aggregation_Outer.exp
+  Generating code
+  4 of 31 functions (12.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Aggregation_Outer.vcxproj -> D:\Codes\winrtApp\COM\Aggregation\Aggregation_Outer\x64\Release\Aggregation_Outer.dll
